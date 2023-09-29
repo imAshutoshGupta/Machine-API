@@ -22,7 +22,7 @@ def get_client(request):
         i+=1
         
     # res = {'success':'response from get client'}
-    json_data = json.dumps(context)
+    json_data = json.dumps(context,default=str)
     return HttpResponse(json_data)
 
 @csrf_exempt                        #decorator used to bypass csrf token
